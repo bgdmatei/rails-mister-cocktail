@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="text-center mt-3">Something</h1>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= simple_form_for [@cocktail] do |f| %>
+        <%= f.input :name %>
+        <%= f.submit "Add"%>
+      <% end %>
+    </div>
+  </div>
+</div>

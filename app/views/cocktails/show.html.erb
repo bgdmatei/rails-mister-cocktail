@@ -1,0 +1,23 @@
+
+<div class="container">
+<div class="row">
+<div class="card-cocktail-show">
+  <h2><%=@cocktail.name%></h2>
+  <h2><% @cocktail.doses.each do |dose|%></h2>
+  <div class="card-cocktail-info d-flex mx-5 ">
+
+      <h3><%= dose.description %></h3>
+      <h3><%= dose.ingredient.name %></h3>
+      <h3><%= link_to 'unDose It', cocktail_dose_path(dose), method: :delete, class: "btn btn-primary" %></h3>
+    </div>
+
+    <% end %>
+<%= link_to "Dose It", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
