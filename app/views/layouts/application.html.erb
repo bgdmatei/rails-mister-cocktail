@@ -10,9 +10,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'shared/navbar' %>
-    <%= yield %>
+  <body style="background-image: url('https://res.cloudinary.com/bogdanm/image/upload/v1573196075/TastyBites-WEB-45-750x422_luubht.jpg') ">
 
+    <% unless action_name == "home" %>
+       <%= render 'shared/navbar' %>
+    <% end %>
+
+    <%= yield %>
   </body>
 </html>

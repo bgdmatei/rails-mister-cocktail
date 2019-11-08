@@ -1,9 +1,7 @@
 .navbar-lewagon {
-  position: fixed;
   background-color: transparent;
   transition: 0.5s background-color ease;
   justify-content: space-between;
-
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,6 +13,11 @@
 }
 
 .navbar-name {
+  h1{
+    font-size: 54px;
+    font-weight: bold;
+    text-shadow: 2px 2px #4d1b86;
+  }
   color: #D5FD51;
 }
 
