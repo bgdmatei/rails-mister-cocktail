@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 
 #added
 gem 'autoprefixer-rails'
+gem 'carrierwave', '~> 1.2'
+gem 'cloudinary', '~> 1.9.1'
 gem 'dotenv-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'

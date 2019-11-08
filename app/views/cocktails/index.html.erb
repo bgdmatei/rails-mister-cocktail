@@ -1,12 +1,14 @@
-
+<div class="home-banner">
+  <%= render 'shared/navbar' %>
+  <%= cl_image_tag "citycocktail_qz86ac", alt: "alttext" %>
+</div>
 
 <div class="container">
-
   <div class="row">
     <% @cocktails.each do |cocktail|%>
         <%= link_to cocktail_path(cocktail), id: "card-link-title" do %>
         <div class="cocktail-card my-3 mx-3" style="width: 18rem;">
-          <%= image_tag "cocktail.jpg", alt: "cocktail", height: '200px' %>
+          <%= cl_image_tag cocktail.photo, height: 200, width: 200, crop: :fill %>
           <div class="card-body">
             <h4 class="card-text"><%= cocktail.name %></h4>
           </div>

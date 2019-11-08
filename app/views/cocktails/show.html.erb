@@ -12,6 +12,7 @@
     </div>
 
     <% end %>
+    <%= link_to "Throw cocktail",cocktail_path(@cocktail), method: :delete, class: "btn btn-primary" %>
 <%= link_to "Dose It", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
     </div>
   </div>
