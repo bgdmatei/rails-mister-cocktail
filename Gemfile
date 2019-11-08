@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 #added
 gem 'autoprefixer-rails'
+gem 'dotenv-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 
