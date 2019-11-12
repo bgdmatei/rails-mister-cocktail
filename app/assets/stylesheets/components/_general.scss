@@ -3,6 +3,7 @@ a:hover {
 }
 
 body {
+  height: 100vh;
   background-size: cover;
 }
 
@@ -23,9 +24,13 @@ h4 {
 }
 
 img {
+  border-radius: 16px;
   margin: 5px;
 }
 
 .text-new {
   color: #D5FD51;
 }
+
+
+
