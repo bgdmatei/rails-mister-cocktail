@@ -1,22 +1,17 @@
-<div class="navbar navbar-expand-sm navbar-lewagon ">
-
-    <%= link_to root_path do  %>
-      <%= image_tag "cocktail.gif", alt: "alttext", id: 'cocktail-avatar' %>
-    <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="navbar-name"><h1>Cocktails</h1></div>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Browse cocktails" , cocktails_path, class: "btn btn-primary mr-2"  %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Add cocktail", new_cocktail_path, class: "btn btn-primary"  %>
-      </li>
-    </ul>
-  </div>
-</div>
+<nav class="navbar" style="height: 120px" >
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <%= link_to root_path do  %>
+          <%= image_tag "cocktail.gif", alt: "alttext", id: 'cocktail-avatar' %>
+          <% end %>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <%= link_to "Browse cocktails" , cocktails_path, class: "btn btn-primary mr-2"  %>
+            </li>
+            <li>
+                <%= link_to "Add cocktail", new_cocktail_path, class: "btn btn-primary"  %>
+            </li>
+        </ul>
+    </nav>
 

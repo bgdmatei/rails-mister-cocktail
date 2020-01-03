@@ -1,18 +1,20 @@
 
-<div class="container">
+<div class="container show-bg">
 <div class="row">
-<div class="card-cocktail-show">
+<div class="card-cocktail-show d-flex">
   <h2><%=@cocktail.name%></h2>
-    <%= cl_image_tag @cocktail.photo, height: 200, width: 200, crop: :fill%>
+    <%= cl_image_tag @cocktail.photo, height: 200, width: 254, crop: :fill%>
   <h2><% @cocktail.doses.each do |dose|%></h2>
   <div class="card-cocktail-info d-flex mx-5 ">
       <h3><%= dose.description %></h3>
       <h3><%= dose.ingredient.name %></h3>
     </div>
+    <div>
       <h3><%= link_to 'unDose It', cocktail_dose_path(dose), method: :delete, class: "btn btn-primary" %></h3>
+      <h3><%= link_to "Throw cocktail",cocktail_path(@cocktail), method: :delete, class: "btn btn-primary" %></h3>
+      <h3> <%= link_to "Dose It", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %> </h3>
+    </div>
     <% end %>
-    <%= link_to "Throw cocktail",cocktail_path(@cocktail), method: :delete, class: "btn btn-primary" %>
-    <%= link_to "Dose It", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
     </div>
   </div>
 </div>

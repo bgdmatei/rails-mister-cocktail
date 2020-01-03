@@ -6,11 +6,12 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body style="background-image: url('https://res.cloudinary.com/bogdanm/image/upload/v1573196075/TastyBites-WEB-45-750x422_luubht.jpg') ">
+  <body>
 
     <% unless action_name == "home" %>
        <%= render 'shared/navbar' %>
