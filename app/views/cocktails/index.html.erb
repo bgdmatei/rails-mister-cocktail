@@ -1,22 +1,28 @@
 
 <div class="container-fluid cocktail-banner">
   <div class="row">
-    <% @cocktails.each do |cocktail|%>
-        <%= link_to cocktail_path(cocktail), id: "card-link-title" do %>
-        <div class="cocktail-card my-3 mx-3" >
-          <%= cl_image_tag cocktail.photo, height: 200, width: 200, crop: :fill %>
-
-          <div class="card-body">
-            <h4 class="card-text"><%= cocktail.name %></h4>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
   </div>
 </div>
-
-
-
-
-
-
+  <div class="container-fluid">
+    <div class="row">
+    <div class="cards display-grid mb-3">
+      <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do%>
+      <% if cocktail.photo.file %>
+      <div class="card" data-aos="fade-up" style="background-image: url(<%= cl_image_path(cocktail.photo) %>)">
+        <% elsif cocktail.image_url == nil %>
+        <div class="card" data-aos="fade-up" style="background-image: url(https://www.interserver.net/tips/wp-content/uploads/2016/10/404error.jpeg)">
+          <% else %>
+          <div class="card" data-aos="fade-up" style="background-image: url(<%= cocktail.image_url %>)">
+            <% end %>
+          </div>
+          <div class="cocktail-name">
+            <p class="cocktail-name pl-3"><%= cocktail.name %></p>
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,17 +2,11 @@
 <div class="container">
 <div class="row">
 <div class="card-cocktail-show">
-  <% if cocktail.photo.file %>
-        <div class="card" data-aos="fade-up" style="background-image: url(<%= cl_image_path(cocktail.photo) %>)">
-        <% elsif cocktail.image_url == nil %>
-          <div class="card" data-aos="fade-up" style="background-image: url(https://www.interserver.net/tips/wp-content/uploads/2016/10/404error.jpeg)">
-          <% else %>
-          <div class="card" data-aos="fade-up" style="background-image: url(<%= cocktail.image_url %>)">
-        <% end %>
   <h2><%=@cocktail.name%></h2>
+    <%= cl_image_tag @cocktail.photo, height: 200, width: 200, crop: :fill%>
   <h2><% @cocktail.doses.each do |dose|%></h2>
   <div class="card-cocktail-info d-flex mx-5 ">
-      <h3> <%= dose.ingredient.name %> - <%= dose.description %>  <%= link_to ('<i class="far fa-minus-square"></i> Remove dose').html_safe, cocktail_dose_path(dose), method: :delete, class: "btn btn-primary" %></h3>
+      <h3> <%= dose.ingredient.name %> - <%= dose.description %>  </h3>
 
     </div>
       <h3><%= link_to ('<i class="far fa-minus-square"></i> Remove dose').html_safe, cocktail_dose_path(dose), method: :delete, class: "btn btn-primary" %></h3>

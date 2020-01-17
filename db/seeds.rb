@@ -8,7 +8,7 @@ Dose.destroy_all
 
 puts "Creating new items.."
 ingredients_url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
-cocktails_url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+cocktails_url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail'
 get_ingredients = open(ingredients_url).read
 get_cocktails = open(cocktails_url).read
 

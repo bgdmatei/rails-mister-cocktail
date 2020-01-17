@@ -12,3 +12,27 @@
 .card-cocktail-show{
 vertical-align: middle;
 }
+
+.card{
+  height: 400px;
+  object-fit: cover;
+  background-size: 125% ;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+ .cards{
+    position: relative;
+    top: 200px;
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    // grid-template-rows: 20%;
+    grid-gap: 16px;
+  }
+
+.cocktail-name {
+      text-align: center;
+    }
