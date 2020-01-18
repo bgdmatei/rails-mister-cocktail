@@ -1,23 +1,26 @@
 
-<div class="container show-bg">
-<div class="row">
-<div class="card-cocktail-show d-flex">
-  <h2><%=@cocktail.name%></h2>
-    <%= cl_image_tag @cocktail.photo, height: 200, width: 254, crop: :fill%>
-  <h2><% @cocktail.doses.each do |dose|%></h2>
-  <div class="card-cocktail-info d-flex mx-5 ">
-      <h3> <%= dose.ingredient.name %> - <%= dose.description %>  </h3>
-
+<div class="container-fluid">
+  <div class="row">
+    <div class=" col-6 show-image p-5">
+      <% if @cocktail.photo.file %>
+      <%= cl_image_tag(@cocktail.photo, class: "card-show", size: "400x500")%>
+      <% elsif @cocktail.image_url == nil %>
+      <%= image_tag("https://res.cloudinary.com/bogdanm/image/upload/v1579273136/empty.jpg", class: "card-show")%>
+      <% else %>
+      <%= image_tag(@cocktail.image_url, class: "card-show", size: "400x500")%>
+      <% end %>
     </div>
-      <h3><%= link_to ('<i class="far fa-minus-square"></i> Remove dose').html_safe, cocktail_dose_path(dose), method: :delete, class: "btn btn-primary" %></h3>
-    <% end %>
-    <%= link_to "Throw cocktail",cocktail_path(@cocktail), method: :delete, class: "btn btn-primary" %>
-    <%= link_to ('<i class="far fa-plus-square"></i> Add dose').html_safe, new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    <div class="col-6 p-5 justify-content-between">
+      <div class="text-center">
+        <h2><%= @cocktail.name %></h2>
+      </div>
+      <% @cocktail.doses.each do |dose|%>
+      <%= dose.ingredient.name %> - <%= dose.description %> <%= link_to ('<i class="far fa-minus-square"></i> Remove dose').html_safe, cocktail_dose_path(dose), method: :delete, class: "btn btn-primary" %>
+      <% end %>
+      <div class="align-bottom">
+        <%= link_to "Throw cocktail",cocktail_path(@cocktail), method: :delete, class: "btn btn-primary" %>
+        <%= link_to ('<i class="far fa-plus-square"></i> Add dose').html_safe, new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+      </div>
     </div>
   </div>
 </div>
-
-
-
-
-

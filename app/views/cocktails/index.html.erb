@@ -11,7 +11,7 @@
       <% if cocktail.photo.file %>
       <div class="card" data-aos="fade-up" style="background-image: url(<%= cl_image_path(cocktail.photo) %>)">
         <% elsif cocktail.image_url == nil %>
-        <div class="card" data-aos="fade-up" style="background-image: url(https://www.interserver.net/tips/wp-content/uploads/2016/10/404error.jpeg)">
+        <div class="card" data-aos="fade-up" style="background-image: url(https://res.cloudinary.com/bogdanm/image/upload/v1579273136/empty.jpg)">
           <% else %>
           <div class="card" data-aos="fade-up" style="background-image: url(<%= cocktail.image_url %>)">
             <% end %>

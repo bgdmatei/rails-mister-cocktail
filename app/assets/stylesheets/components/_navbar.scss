@@ -1,6 +1,6 @@
 
 .navbar-lewagon {
-  background-color: transparent;
+  background-color: #fff;
   transition: 0.5s background-color ease;
   justify-content: space-between;
 }
@@ -29,7 +29,7 @@ body {
 .navbar {
     font-size: 18px;
     padding-bottom: 10px;
-    background-color: transparent;
+
 }
 
 .main-nav {
@@ -68,12 +68,11 @@ body {
     display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .navbar {
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
-        height: 70px;
         align-items: center;
     }
 
