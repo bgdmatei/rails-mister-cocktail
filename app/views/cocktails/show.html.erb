@@ -3,21 +3,23 @@
   <div class="row">
     <div class=" col-6 show-image p-5">
       <% if @cocktail.photo.file %>
-      <%= cl_image_tag(@cocktail.photo, class: "card-show", size: "400x500")%>
+      <%= cl_image_tag(@cocktail.photo, class: "card-show", size: "300x400")%>
       <% elsif @cocktail.image_url == nil %>
       <%= image_tag("https://res.cloudinary.com/bogdanm/image/upload/v1579273136/empty.jpg", class: "card-show")%>
       <% else %>
-      <%= image_tag(@cocktail.image_url, class: "card-show", size: "400x500")%>
+      <%= image_tag(@cocktail.image_url, class: "card-show", size: "300x400")%>
       <% end %>
     </div>
-    <div class="col-6 p-5 justify-content-between">
-      <div class="text-center">
+    <div class="col-3 p-5 ">
+      <div class="text-center show-cocktail-name">
         <h2><%= @cocktail.name %></h2>
       </div>
+      <div class="text-center ingredient-container">
       <% @cocktail.doses.each do |dose|%>
-      <%= dose.ingredient.name %> - <%= dose.description %> <%= link_to ('<i class="far fa-minus-square"></i> Remove dose').html_safe, cocktail_dose_path(dose), method: :delete, class: "btn btn-primary" %>
-      <% end %>
-      <div class="align-bottom">
+        <p> <%= dose.ingredient.name %> - <%= dose.description %> <%= link_to ('<i class="far fa-minus-square"></i>').html_safe, cocktail_dose_path(dose), method: :delete %></p>
+        <% end %>
+      </div>
+      <div class="align-bottom text-center">
         <%= link_to "Throw cocktail",cocktail_path(@cocktail), method: :delete, class: "btn btn-primary" %>
         <%= link_to ('<i class="far fa-plus-square"></i> Add dose').html_safe, new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
       </div>
