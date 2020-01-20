@@ -12,6 +12,16 @@
       <li class="nav-item">
         <%= link_to "New cocktail", new_cocktail_path, class: "btn btn-primary"  %>
       </li>
+      <li>
+        <%= form_tag cocktails_path, method: :get, class: "search-form d-flex" do %>
+          <%= submit_tag "Search", class: "btn-primary ml-2", id:"search" %>
+         <%= text_field_tag :search,
+          params[:search],
+          class: "form-control ml-2",
+          placeholder: "Search"
+          %>
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
