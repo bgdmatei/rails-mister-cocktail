@@ -4,8 +4,10 @@
   </div>
 </div>
   <div class="container-fluid">
-
     <div class="row justify-content-center">
+      <div class="index-title">
+        <h2>Pick your poison</h2>
+      </div>
     <div class="cards display-grid mb-3">
       <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do%>
