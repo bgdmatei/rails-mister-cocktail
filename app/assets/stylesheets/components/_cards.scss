@@ -64,7 +64,7 @@
   background-repeat: no-repeat;
   background-position-y: top;
   background-position-x: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
 .show-image {
@@ -78,11 +78,15 @@
   width: 100%;
   margin-top: 1em;
   margin-bottom: 1em;
-  text-align: right;
+  border: 1px solid #181a54;
+  padding: 8px;
+  box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.2);
 }
 
 .ingredient-container p {
-  text-align: left;
+  font-size: 24px;
+  color: #F6C8D8;
+
 }
 
  .cards{
@@ -96,12 +100,21 @@
   margin-left: 6em;
   }
 
-.cocktail-name {
+.cocktail-name p{
+  font-size: 24px;
+  border: 1px solid #8080801c;
   text-align: center;
   font-weight: bold;
-  color: purple;
+  color: #F6C8D8;
 }
 
 .show-cocktail-name h2{
   font-size: 48px;
+  color: #181a54;
+}
+
+.show-cocktail {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+  border: 2px solid #181a54;
+  border-radius: 4px;
 }
