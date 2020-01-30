@@ -5,10 +5,10 @@
   <div class="row justify-content-center">
     <div class="col-6 text-new">
       <%= simple_form_for [@cocktail] do |f| %>
-        <%= f.input :name %>
-        <%= f.input :photo %>
+        <%= f.input :name, label: "Name your cocktail"%>
+        <%= f.input :photo, label: "Upload your cocktail" %>
         <%= f.input :photo_cache, as: :hidden %>
-        <%= f.submit "Add"%>
+        <%= f.submit "Add", class: "btn-primary"%>
       <% end %>
     </div>
   </div>
