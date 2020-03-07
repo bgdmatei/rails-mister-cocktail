@@ -1,24 +1,8 @@
-# README
+# Mister Cocktail
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An app that creates and saves your favourite cocktail recipes
 
-Things you may want to cover:
+This was my first ever built project, meant to demonstrate front-end
+development skills as well as database design
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please run,`` bundle install `` when you clone the app.
